@@ -1,0 +1,170 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+   
+}
+
+.header {
+    background-image: url('../imazhe/animals.png');
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.733);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0c0b0b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.search-form input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #403d3b;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.147);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+.contact-section h2, .contact-section p {
+    margin: 10px 0;
+}
+.photo-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+}
+
+.photo-item {
+    text-align: center;
+    flex: 0 0 23%; 
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;  
+    object-fit: cover;  
+    border-radius: 10px;
+}
+hr {
+    border: 0;
+    height: 2px; 
+    color:gray;
+    background-color:gray
+}
+footer {
+    width: 100%; /* Ensure the footer takes the full width of the viewport */
+    background-color: rgb(79, 79, 79);
+    padding: 10px 0; /* Match the padding of the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Ensure the footer stays at the bottom of the page */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+@media (max-width:991px){
+
+    html{
+       font-size: 55%;
+    }
+ 
+ }
+ 
+ @media (max-width:768px){
+ 
+    .products-preview .preview img{
+       height: 25rem;
+    }
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+ }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bird Page</title>
+  <link rel="icon" href="imazhe/bird.png">
+  <link rel="stylesheet" href="css/animals.css">
+</head>
+<body>
+    <div class="container-wrapper">
+    <nav class="navbar">
+        <img src="imazhe/logo.png" alt="Logo" class="navbar-logo">
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="searchBirds()">Search</button>
+        </form>
+    </nav>
+</div>
+    <div id="bird-container"></div> 
+    <script src="js/birdController.js"></script> 
+    <footer>
+        <p style="text-align: center;">© 2024 Pawsome Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

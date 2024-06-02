@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(170, 165, 165);
+}
+    .grid-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    overflow-x: auto;
+    margin-top: 20px; /* Add margin-top to create space between grid-container and navbar */
+}
+    
+    .card {
+        background-color: rgba(0, 0, 0, 0.147);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+        max-width: 700px;
+        margin-bottom: 20px; /* Add margin-bottom to create space between cards */
+    }
+    
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .card h2 {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+    .card p {
+        margin: 10px;
+    }
+.header {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin-bottom to create space between navbar and grid-container */
+}
+.navbar-left {
+    margin-left: 20px; 
+}
+
+.navbar-logo {
+    height: 40px; 
+    margin-left: 5px;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 1%; /* Adjust margin to give space between search form and other navbar items */
+}
+
+.search-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+.content {
+    flex: 1; 
+}
+
+
+footer {
+    background-color: rgb(79, 79, 79);
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+@media (max-width:991px){
+
+    html{
+       font-size: 55%;
+    }
+ 
+ }
+ 
+ @media (max-width:768px){
+ 
+    .products-preview .preview img{
+       height: 25rem;
+    }
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+ }
