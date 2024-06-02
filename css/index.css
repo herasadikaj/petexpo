@@ -127,23 +127,18 @@ body, html {
     object-fit: cover;  
     border-radius: 10px;
 }
-hr {
-    border: 0;
-    height: 2px; 
-    color:gray;
-    background-color:gray
-}
+
 footer {
-    width: 100%; /* Ensure the footer takes the full width of the viewport */
+    width: 100%; 
     background-color: rgb(79, 79, 79);
-    padding: 10px 0; /* Match the padding of the navbar */
+    padding: 10px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    position: relative; /* Ensure the footer stays at the bottom of the page */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    position: relative; 
+    box-sizing: border-box; 
 }
 @media (max-width:991px){
 

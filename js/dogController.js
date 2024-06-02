@@ -14,21 +14,20 @@ class Dog {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await fetchDataAndDisplayDogs(); // Fetch and display dogs
+    await fetchDataAndDisplayDogs(); 
 
-    // Add event listener for search functionality
+   
     document.getElementById('searchInput').addEventListener('input', searchDogs);
 });
 
 async function fetchDataAndDisplayDogs() {
     try {
-        const response = await fetch('/dogs'); // Fetch dogs data
-        const data = await response.json(); // Parse JSON response
+        const response = await fetch('/dogs'); 
+        const data = await response.json(); 
 
-        const dogContainer = document.getElementById('dog-container'); // Get the container where dogs will be displayed
-        dogContainer.innerHTML = ''; // Clear the container before appending new data
+        const dogContainer = document.getElementById('dog-container'); 
+        dogContainer.innerHTML = ''; 
 
-        // Loop through each dog data and create a card for each
         data.forEach(dogData => {
             const dog = new Dog(
                 dogData.id,
@@ -78,6 +77,14 @@ function showDogDetails(dog) {
 
 function searchDogs() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    console.log(`Searching for dogs: ${searchInput}`);
-    // Implement search functionality for dogs
+    const dogCards = document.querySelectorAll('#dog-container .card');
+  
+    dogCards.forEach(card => {
+        const dogName = card.querySelector('h2').textContent.toLowerCase();
+        if (dogName.includes(searchInput)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }

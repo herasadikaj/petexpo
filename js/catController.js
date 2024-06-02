@@ -11,21 +11,21 @@ class Cat {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await fetchDataAndDisplayCats(); // Fetch and display cats
+    await fetchDataAndDisplayCats(); 
 
-    // Add event listener for search functionality
+   
     document.getElementById('searchInput').addEventListener('input', searchCats);
 });
 
 async function fetchDataAndDisplayCats() {
     try {
-        const response = await fetch('/cats'); // Fetch cats data
-        const data = await response.json(); // Parse JSON response
+        const response = await fetch('/cats');
+        const data = await response.json(); 
 
-        const catContainer = document.getElementById('cat-container'); // Get the container where cats will be displayed
-        catContainer.innerHTML = ''; // Clear the container before appending new data
+        const catContainer = document.getElementById('cat-container'); 
+        catContainer.innerHTML = ''; 
 
-        // Loop through each cat data and create a card for each
+
         data.forEach(catData => {
             const cat = new Cat(
                 catData.id,
@@ -72,6 +72,14 @@ function showCatDetails(cat) {
 
 function searchCats() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    console.log(`Searching for cats: ${searchInput}`);
-    // Implement search functionality for cats
+    const catCards = document.querySelectorAll('#cat-container .card');
+  
+    catCards.forEach(card => {
+        const catName = card.querySelector('h2').textContent.toLowerCase();
+        if (catName.includes(searchInput)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }

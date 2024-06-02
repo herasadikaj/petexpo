@@ -8,9 +8,10 @@ html, body {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    flex-wrap: wrap; 
     overflow-x: auto;
-    margin-top: 20px; /* Add margin-top to create space between grid-container and navbar */
+    margin-top: 20px; 
+    position: relative;
 }
     
     .card {
@@ -20,7 +21,7 @@ html, body {
         border-radius: 10px;
         margin: 0 auto;
         max-width: 700px;
-        margin-bottom: 20px; /* Add margin-bottom to create space between cards */
+        margin-bottom: 20px; 
     }
     
     .card img {
@@ -62,7 +63,7 @@ html, body {
     padding: 10px 0;
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Add margin-bottom to create space between navbar and grid-container */
+    margin-bottom: 20px; 
 }
 .navbar-left {
     margin-left: 20px; 
@@ -101,7 +102,7 @@ html, body {
 .search-form {
     display: flex;
     align-items: center;
-    margin-left: 1%; /* Adjust margin to give space between search form and other navbar items */
+    margin-left: 1%; 
 }
 
 .search-form input {
@@ -135,6 +136,7 @@ footer {
     align-items: center;
     text-align: center;
     color: white;
+    bottom: 0;
 }
 @media (max-width:991px){
 

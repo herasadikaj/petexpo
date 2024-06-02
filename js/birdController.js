@@ -15,24 +15,24 @@ class Bird {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await fetchDataAndDisplayBirds(); // Fetch and display birds
+  await fetchDataAndDisplayBirds(); 
 
-  // Add event listener for search functionality
+ 
   document.getElementById('searchInput').addEventListener('input', searchBirds);
 });
 
 async function fetchDataAndDisplayBirds() {
   try {
-      const response = await fetch('/birds'); // Fetch birds data
+      const response = await fetch('/birds'); 
       if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      const data = await response.json(); // Parse JSON response
+      const data = await response.json(); 
 
-      const birdContainer = document.getElementById('bird-container'); // Get the container where birds will be displayed
-      birdContainer.innerHTML = ''; // Clear the container before appending new data
+      const birdContainer = document.getElementById('bird-container'); 
+      birdContainer.innerHTML = ''; 
 
-      // Loop through each bird data and create a card for each
+
       data.forEach(birdData => {
           const bird = new Bird(
               birdData.id,
@@ -83,6 +83,14 @@ function showBirdDetails(bird) {
 
 function searchBirds() {
   const searchInput = document.getElementById('searchInput').value.toLowerCase();
-  console.log(`Searching for birds: ${searchInput}`);
-  // Implement search functionality for birds
+  const birdCards = document.querySelectorAll('#bird-container .card');
+
+  birdCards.forEach(card => {
+      const birdName = card.querySelector('h2').textContent.toLowerCase();
+      if (birdName.includes(searchInput)) {
+          card.style.display = 'block';
+      } else {
+          card.style.display = 'none';
+      }
+  });
 }
