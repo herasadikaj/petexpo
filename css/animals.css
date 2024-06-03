@@ -103,6 +103,11 @@ html, body {
     align-items: center;
     margin-left: auto; 
     margin-right: 1%; 
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 .search-form input {
     padding: 10px;
@@ -137,6 +142,11 @@ footer {
     color: white;
     position: relative; 
     box-sizing: border-box; 
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 @media (max-width:991px){

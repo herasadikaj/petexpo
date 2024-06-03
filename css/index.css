@@ -26,6 +26,11 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .navbar ul {
@@ -49,6 +54,11 @@ body, html {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .dropdown-content a {
@@ -70,6 +80,11 @@ body, html {
     display: flex;
     align-items: center;
     margin-right: 50px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .search-form input {
@@ -92,17 +107,32 @@ body, html {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .section {
     padding: 60px 20px;
     text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .about-section {
-    max-width: 1300px; 
-    margin: 0 auto; 
-    padding: 60px 20px; 
+     max-width: 1300px; 
+     margin: 0 auto; 
+     padding: 60px 20px; 
+     user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 .kafshet-container {
     display: flex;
@@ -117,6 +147,13 @@ body, html {
     object-fit: contain;
     border-radius: 10px;
 }
+.kafshet-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
 .contact-section {
     background-color: rgba(226, 222, 222, 0.889);
     color: white;
@@ -124,18 +161,17 @@ body, html {
     border-radius: 10px;
     margin: 0 auto;
     max-width: 700px;
-    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .contact-section h2, .contact-section p {
     margin: 10px 0;
 }
-.kafshet-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+
 
 .photo {
     width: 300px; 
@@ -183,6 +219,11 @@ body, html {
     align-items: center;
     box-sizing: border-box;
     flex: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .photo-item:hover {
@@ -203,6 +244,11 @@ footer {
     color: white;
     position: relative; 
     box-sizing: border-box; 
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 @media (max-width:991px){
