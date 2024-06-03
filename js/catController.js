@@ -22,7 +22,7 @@ async function fetchDataAndDisplayCats() {
         const response = await fetch('/cats');
         const data = await response.json(); 
 
-        const catContainer = document.getElementById('cat-container'); 
+        const catContainer = document.getElementById('pet-container'); 
         catContainer.innerHTML = ''; 
 
 
@@ -72,7 +72,7 @@ function showCatDetails(cat) {
 
 function searchCats() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const catCards = document.querySelectorAll('#cat-container .card');
+    const catCards = document.querySelectorAll('#pet-container .card');
   
     catCards.forEach(card => {
         const catName = card.querySelector('h2').textContent.toLowerCase();

@@ -25,7 +25,7 @@ async function fetchDataAndDisplayDogs() {
         const response = await fetch('/dogs'); 
         const data = await response.json(); 
 
-        const dogContainer = document.getElementById('dog-container'); 
+        const dogContainer = document.getElementById('pet-container'); 
         dogContainer.innerHTML = ''; 
 
         data.forEach(dogData => {
@@ -77,7 +77,7 @@ function showDogDetails(dog) {
 
 function searchDogs() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const dogCards = document.querySelectorAll('#dog-container .card');
+    const dogCards = document.querySelectorAll('#pet-container .card');
   
     dogCards.forEach(card => {
         const dogName = card.querySelector('h2').textContent.toLowerCase();

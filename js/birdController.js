@@ -29,7 +29,7 @@ async function fetchDataAndDisplayBirds() {
       }
       const data = await response.json(); 
 
-      const birdContainer = document.getElementById('bird-container'); 
+      const birdContainer = document.getElementById('pet-container'); 
       birdContainer.innerHTML = ''; 
 
 
@@ -83,7 +83,7 @@ function showBirdDetails(bird) {
 
 function searchBirds() {
   const searchInput = document.getElementById('searchInput').value.toLowerCase();
-  const birdCards = document.querySelectorAll('#bird-container .card');
+  const birdCards = document.querySelectorAll('#pet-container .card');
 
   birdCards.forEach(card => {
       const birdName = card.querySelector('h2').textContent.toLowerCase();
